@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from 'react-router-dom';
+import { Card, Logo, Form, Input, Button } from '../components/AuthForm';
 
-class EmployerHome extends Component {
-    render() {
-        return (
-            <div>
-                <p>Job board with job posts created by business here.</p>
-            </div>
-        )
-    }
+
+function EmployerHome() {
+  return (
+    <Card>
+      <p>Landing page after log in for business accounts here.</p>
+    </Card>
+  );
 }
 
 export default EmployerHome;
