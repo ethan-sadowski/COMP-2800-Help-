@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import Signup from './pages/Signup';
+import JobBoard from './pages/JobBoard';
 import { AuthContext } from "./context/auth";
 
 function App(props) {
@@ -13,9 +14,10 @@ function App(props) {
     <AuthContext.Provider value={false}>
     <Router>
       <div>
+        <h1>Help!</h1>
         <ul>
           <li>
-            <Link to="/">Home Page</Link>
+            <Link to="/JobBoard">Job Board</Link>
           </li>
           <li>
             <Link to="/login">Log In</Link>
@@ -27,7 +29,7 @@ function App(props) {
             <Link to="/admin">Admin Page</Link>
           </li>
         </ul>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/JobBoard" component={JobBoard} />
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <PrivateRoute path="/admin" component={Admin} />
